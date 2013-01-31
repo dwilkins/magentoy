@@ -1,0 +1,17 @@
+<%= form_for(@magento_product) do |f| %>
+  <% if @magento_product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@magento_product.errors.count, "error") %> prohibited this magento_product from being saved:</h2>
+
+      <ul>
+      <% @magento_product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

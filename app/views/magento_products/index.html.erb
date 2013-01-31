@@ -1,0 +1,21 @@
+<h1>Listing magento_products</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @magento_products.each do |magento_product| %>
+  <tr>
+    <td><%= link_to 'Show', magento_product %></td>
+    <td><%= link_to 'Edit', edit_magento_product_path(magento_product) %></td>
+    <td><%= link_to 'Destroy', magento_product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Magento product', new_magento_product_path %>
